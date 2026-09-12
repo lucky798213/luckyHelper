@@ -1,0 +1,28 @@
+# Build artifacts
+/final-agent
+/bin/
+/dist/
+*.test
+*.out
+.data/
+
+# IDE
+/.idea/
+/.vscode/
+/.worktrees/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Local env overrides
+.env
+.env.local
+
+# 本地智能体工作区（会话记忆/临时状态，不入库）
+/.workbuddy/
+
+# 生成的产物（沙箱执行、图片生成等的输出）
+/output/
