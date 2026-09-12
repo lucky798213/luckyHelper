@@ -119,7 +119,7 @@ graph_runtime:
 auth:
   jwt_secret: "${JWT_SECRET}"
   jwt_ttl_hours: 168          # 7 天
-  jwt_issuer: "agi-assistant"
+  jwt_issuer: "luckyHelper"
 
 # ===== 观测性（当前仅 pprof）=====
 observability:

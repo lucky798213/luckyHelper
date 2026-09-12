@@ -1,15 +1,37 @@
 # 对话模型配置
+# ===== 对话模型（DeepSeek，OpenAI 兼容协议）=====
+# 官方文档 https://api-docs.deepseek.com
+#   base_url https://api.deepseek.com → 对话端点 .../chat/completions
+#   模型名   deepseek-flash   （= DeepSeek-V4.1-Flash，快且便宜）
+#            deepseek-v4-pro  （推理最强档，单价约 flash 的 3 倍）
+#   旧模型名 deepseek-chat / deepseek-reasoner 已于 2026-07-24 弃用，请勿再使用
+# api_key 留空 → IsRealLLM()=false → 直接走内置 mock（能聊但回答是假的）。
+# 不要写 "." 之类占位符——非空字符串会被判定为「已配置真实 API」，
+# 会真的发请求、401 失败后才降级 mock，白白浪费一次往返。
+# 真实 key 放进被 gitignore 的 .env（模板见 .env.example），此处用变量引用。
 llm:
-  api_url: https://open.bigmodel.cn/api/paas/v4/chat/completions
-  api_key: "."
-  model: glm-5.1
+  api_url: https://api.deepseek.com/chat/completions
+  api_key: "${LLM_API_KEY}"
+  model: deepseek-v4-pro
   # 快模型：规划/参数抽取/子Agent/RAG改写精排等内部步骤用它提速；最终答案仍用 model。
-  # 留空则回落为 model（无行为变化）。
-  fast_model: glm-4.7-flash
+  # 留空则回落为 model。这里用便宜的 flash 档——内部步骤不值得上 pro。
+  fast_model: deepseek-flash
+  # ⚠️ 思考模式默认开启且 effort=high，每次调用都会先产出一段思维链并计入输出 token。
+  # 本项目一轮对话内会多次调用 LLM，开着会明显变慢变贵。
+  # true = 下发 thinking={"type":"disabled"} 关掉它。
+  # ⚠️ 该字段只有 DeepSeek 接受；换回智谱等其他厂商时务必改回 false。
+  disable_thinking: true
+  # 注意：思考模式下 temperature 不生效（不报错但被忽略）；关掉思考后才会真正生效。
   temperature: 1.0
+# ===== 向量化模型 =====
+# ⚠️ DeepSeek 不提供 embeddings 接口！官方端点只有 /chat/completions、/responses、
+#    /files、/models 等，没有 /embeddings。所以「对话用 DeepSeek」时，
+#    向量化必须另找一家 —— 这里保留智谱的 embedding-3（需要单独申请智谱 Key）。
+# 留空 → Embed() 直接返回「embedding API 未配置」，RAG 与长期记忆的向量化全部失效。
+# 换模型时必须同步调整 rag.rag_milvus_dim（embedding-3 默认 2048 维）。
 embedding:
   api_url: https://open.bigmodel.cn/api/paas/v4/embeddings
-  api_key: "."
+  api_key: "${EMBEDDING_API_KEY}"
   model: embedding-3
 
 # 向量数据库配置
@@ -20,7 +42,9 @@ milvus:
 # 关系型数据库配置
 postgres:
   host: localhost
-  port: 5432
+  # 本机 5432 已被 EDB 安装包装的 PostgreSQL 18 占用（系统级 LaunchDaemon），
+  # 故由 docker-compose.override.yml 把 compose 的 postgres 映射到 5433，此处同步。
+  port: 5433
   user: aiagent
   password: aiagent123
   database: aiagent
@@ -78,8 +102,10 @@ harness:
 server:
   port: "8090"
 
+# ===== 联网搜索（Tavily，可选）=====
+# 留空时 search_web 工具不可用，agent 会降级为直接用模型知识回答。
 search:
-  api_key: "."               # 请填入你的 Tavily API Key（可选）
+  api_key: "${SEARCH_API_KEY}"
   api_url: "https://api.tavily.com/search"
 
 # ===== 知识图谱（Neo4j，可选，不可用时跳过图检索）=====
@@ -137,7 +163,7 @@ graph_runtime:
 auth:
   jwt_secret: "${JWT_SECRET}"
   jwt_ttl_hours: 168          # access token 有效期：7 天
-  jwt_issuer: "agi-assistant"
+  jwt_issuer: "luckyHelper"
 
 # ===== 观测性（当前仅 pprof）=====
 # pprof 会暴露 goroutine 栈、堆、CPU profile 等内部信息，

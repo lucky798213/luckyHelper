@@ -1,0 +1,13 @@
+# 本机专用覆盖（不修改仓库里的 docker-compose.yml）
+#
+# 原因：本机 5432 端口已被 EDB 安装包装的 PostgreSQL 18 占用（系统级 LaunchDaemon
+# postgresql-18，数据在 /Library/PostgreSQL/18/data），与本项目无关但把 5432 占死了。
+#
+# Compose 默认对 ports 是「拼接」而非「覆盖」，直接写 ports 会导致 5432 和 5433 同时
+# 发布、5432 依然冲突。这里用 `!override` 标签强制替换（需要 Compose >= 2.24）。
+#
+# 配套：config/config.yaml 的 postgres.port 需同步设为 5433。
+services:
+  postgres:
+    ports: !override
+      - "5433:5432"

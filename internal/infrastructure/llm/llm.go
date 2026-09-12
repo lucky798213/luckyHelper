@@ -1,8 +1,8 @@
 package llm
 
 import (
-	"agi-assistant/config"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/pkg/logger"
 	"bufio"
 	"bytes"
 	"context"
@@ -109,6 +109,24 @@ type apiRequest struct {
 	Messages    []Message `json:"messages"`
 	Temperature float64   `json:"temperature"`
 	Stream      bool      `json:"stream,omitempty"`
+	// Thinking 关闭思考模式的控制字段。仅在 cfg.LLMDisableThinking=true 时下发；
+	// 其余情况为 nil，配合 omitempty 保证它根本不进请求体，对其他厂商零影响。
+	Thinking *thinkingControl `json:"thinking,omitempty"`
+}
+
+// thinkingControl 思考模式开关（DeepSeek 的 OpenAI 兼容格式）。
+// DeepSeek 默认 {"type":"enabled"} 且 effort=high，会产生一段思维链；
+// 本客户端只会下发 "disabled"，用于给 ReAct 这类一轮内多次调用的场景提速降本。
+type thinkingControl struct {
+	Type string `json:"type"`
+}
+
+// thinking 返回本次请求要下发的思考模式控制；未启用时返回 nil（字段不出现在请求体里）。
+func (c *Client) thinking() *thinkingControl {
+	if !c.cfg.LLMDisableThinking {
+		return nil
+	}
+	return &thinkingControl{Type: "disabled"}
 }
 
 type apiResponse struct {
@@ -150,6 +168,7 @@ func (c *Client) callAPIWithContext(ctx context.Context, model, systemPrompt str
 		Model:       model,
 		Messages:    msgs,
 		Temperature: c.cfg.Temperature,
+		Thinking:    c.thinking(),
 	})
 	if err != nil {
 		return "", fmt.Errorf("序列化请求失败: %w", err)
@@ -202,6 +221,7 @@ func (c *Client) callAPIStream(ctx context.Context, systemPrompt string, message
 		Messages:    msgs,
 		Temperature: c.cfg.Temperature,
 		Stream:      true,
+		Thinking:    c.thinking(),
 	})
 	if err != nil {
 		return "", fmt.Errorf("序列化请求失败: %w", err)

@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 
 	"gopkg.in/yaml.v3"
 )
@@ -29,6 +29,16 @@ type LLMConfig struct {
 	// 为空时回落为 LLMModel（无行为变化）。最终答案仍用 LLMModel。
 	LLMFastModel string
 	Temperature  float64
+	// LLMDisableThinking 关闭厂商的「思考模式」（下发 thinking={"type":"disabled"}）。
+	//
+	// 背景：DeepSeek 的思考模式**默认开启且 effort=high**，每次调用都会先产出一段
+	// 思维链（reasoning_content），只走 content 的调用方虽然拿得到最终答案，但要为
+	// 这段思维链付输出 token 并等更久。本项目一轮对话内会多次调用 LLM（Planner、
+	// 参数抽取、子 Agent、RAG 改写/精排），开着会让延迟与成本明显上升。
+	//
+	// ⚠️ 该字段只有部分厂商（DeepSeek）接受。换回智谱等厂商时**必须置为 false**，
+	// 否则未知字段可能被拒。置 false 时该字段完全不会出现在请求体里。
+	LLMDisableThinking bool
 }
 
 func (c LLMConfig) IsRealLLM() bool { return c.LLMAPIKey != "" }
@@ -186,7 +196,7 @@ type GraphRuntimeConfig struct {
 type AuthConfig struct {
 	JWTSecret   string
 	JWTTTLHours int    // access token 有效时长（小时）；0 → 7 天默认
-	JWTIssuer   string // 签发方标识，默认 "agi-assistant"
+	JWTIssuer   string // 签发方标识，默认 "luckyHelper"
 }
 
 // ObservabilityConfig 观测/诊断相关开关。
@@ -238,11 +248,12 @@ type APIConfig struct {
 // yamlFile 对应 config/config.yaml 的结构
 type yamlFile struct {
 	LLM struct {
-		APIUrl      string  `yaml:"api_url"`
-		APIKey      string  `yaml:"api_key"`
-		Model       string  `yaml:"model"`
-		FastModel   string  `yaml:"fast_model"`
-		Temperature float64 `yaml:"temperature"`
+		APIUrl          string  `yaml:"api_url"`
+		APIKey          string  `yaml:"api_key"`
+		Model           string  `yaml:"model"`
+		FastModel       string  `yaml:"fast_model"`
+		Temperature     float64 `yaml:"temperature"`
+		DisableThinking bool    `yaml:"disable_thinking"`
 	} `yaml:"llm"`
 	Embedding struct {
 		APIUrl string `yaml:"api_url"`
@@ -388,11 +399,12 @@ func DefaultConfig() *APIConfig {
 			ServerPort: y.Server.Port,
 		},
 		LLMConfig: LLMConfig{
-			LLMAPIUrl:    y.LLM.APIUrl,
-			LLMAPIKey:    y.LLM.APIKey,
-			LLMModel:     y.LLM.Model,
-			LLMFastModel: y.LLM.FastModel,
-			Temperature:  y.LLM.Temperature,
+			LLMAPIUrl:          y.LLM.APIUrl,
+			LLMAPIKey:          y.LLM.APIKey,
+			LLMModel:           y.LLM.Model,
+			LLMFastModel:       y.LLM.FastModel,
+			Temperature:        y.LLM.Temperature,
+			LLMDisableThinking: y.LLM.DisableThinking,
 		},
 		EmbeddingConfig: EmbeddingConfig{
 			EmbeddingAPIUrl: y.Embedding.APIUrl,
