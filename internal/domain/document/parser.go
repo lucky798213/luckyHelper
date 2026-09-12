@@ -206,7 +206,7 @@ func extractPDFWithPdftotext(data []byte) (string, bool) {
 }
 
 func writeTempPDF(data []byte) (string, func(), error) {
-	f, err := os.CreateTemp("", "agi-saber-*.pdf")
+	f, err := os.CreateTemp("", "luckyHelper-*.pdf")
 	if err != nil {
 		return "", func() {}, err
 	}

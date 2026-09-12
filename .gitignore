@@ -26,3 +26,6 @@
 
 # 生成的产物（沙箱执行、图片生成等的输出）
 /output/
+
+# RAG 测试数据集（由 test/generate_real_rag_dataset.py 生成，不入库）
+/test/test.txt

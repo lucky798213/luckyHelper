@@ -131,7 +131,7 @@ sandbox:
   readonly_rootfs: true
   # loop 产物根目录（宿主机路径，支持 ~）；每次请求在其下按 {userID}/{taskID} 建子目录，
   # 挂载到沙箱 /workspace，生成的报告/作业等文件会出现在这里（默认桌面）。
-  artifact_host_dir: "~/Desktop/agi-saber"
+  artifact_host_dir: "~/Desktop/luckyHelper"
 
 # ===== 命令安全校验 =====
 security:
