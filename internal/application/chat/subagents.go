@@ -8,9 +8,9 @@ import (
 	"strings"
 	"sync"
 
-	"agi-assistant/internal/domain/document"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/document"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/usercontext"
 )
 
 type SubAgentTask struct {

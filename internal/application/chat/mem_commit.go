@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/memory/consistency"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // commitMemory persists a new memory and its outbox events before making the

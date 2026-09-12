@@ -10,15 +10,15 @@
 package handler
 
 import (
-	"agi-assistant/config"
-	authapp "agi-assistant/internal/application/auth"
-	"agi-assistant/internal/application/chat"
-	skillapp "agi-assistant/internal/application/skill"
-	authdomain "agi-assistant/internal/domain/auth"
-	"agi-assistant/internal/domain/document"
-	"agi-assistant/internal/domain/tool"
-	toolimpl "agi-assistant/internal/infrastructure/tool"
-	httpmw "agi-assistant/internal/interfaces/http/middleware"
+	"luckyHelper/config"
+	authapp "luckyHelper/internal/application/auth"
+	"luckyHelper/internal/application/chat"
+	skillapp "luckyHelper/internal/application/skill"
+	authdomain "luckyHelper/internal/domain/auth"
+	"luckyHelper/internal/domain/document"
+	"luckyHelper/internal/domain/tool"
+	toolimpl "luckyHelper/internal/infrastructure/tool"
+	httpmw "luckyHelper/internal/interfaces/http/middleware"
 	"context"
 	"encoding/json"
 	"errors"
@@ -142,7 +142,7 @@ func (s *Server) registerRoutes() {
 	r.Get("/", func(w http.ResponseWriter, _ *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte("AGI-saber API. 前端请运行 web/（npm run dev 或部署 dist）。"))
+		_, _ = w.Write([]byte("luckyHelper API. 前端请运行 web/（npm run dev 或部署 dist）。"))
 	})
 }
 

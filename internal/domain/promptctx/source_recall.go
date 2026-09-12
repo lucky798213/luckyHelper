@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"agi-assistant/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/longterm"
 )
 
 // Recaller 抽象 LongTerm / GraphMemory 共有的过滤召回能力

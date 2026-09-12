@@ -39,7 +39,7 @@ POST_URL = "https://juejin.cn/post/{article_id}"
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0 Safari/537.36 "
-    "AGI-saber-RAG-benchmark/1.0"
+    "luckyHelper-RAG-benchmark/1.0"
 )
 
 CHUNK_SIZE = 200

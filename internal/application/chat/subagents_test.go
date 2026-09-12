@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/tool"
 )
 
 func TestDocumentTitlePrefersMarkdownH1(t *testing.T) {

@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"strings"
 
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // 冲突检测仅对这些 category 启用。其它类型默认共存。

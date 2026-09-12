@@ -14,10 +14,10 @@ import (
 	"fmt"
 	"strings"
 
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // replanContext 打包 replan 所需的图状态快照，方便复用同一 prompt 模板

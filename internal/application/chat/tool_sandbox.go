@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"agi-assistant/internal/domain/sandbox"
-	sandboximpl "agi-assistant/internal/infrastructure/sandbox"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/sandbox"
+	sandboximpl "luckyHelper/internal/infrastructure/sandbox"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // initSandbox 初始化命令执行沙箱（供 loop 产物物化使用）。

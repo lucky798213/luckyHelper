@@ -12,8 +12,8 @@ import (
 	"net/http"
 	"strings"
 
-	"agi-assistant/internal/domain/auth"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/auth"
+	"luckyHelper/internal/usercontext"
 )
 
 // UserIDFromContext / UsernameFromContext / WithUser 是 usercontext 包的转发包装。

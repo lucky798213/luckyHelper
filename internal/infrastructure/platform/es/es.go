@@ -2,8 +2,8 @@
 package es
 
 import (
-	"agi-assistant/config"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/pkg/logger"
 
 	es "github.com/elastic/go-elasticsearch/v8"
 )

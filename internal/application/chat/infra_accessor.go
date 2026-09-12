@@ -4,13 +4,13 @@
 package chat
 
 import (
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/memory/preference"
-	"agi-assistant/internal/domain/memory/shortterm"
-	"agi-assistant/internal/domain/rag"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/pkg/logger"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/preference"
+	"luckyHelper/internal/domain/memory/shortterm"
+	"luckyHelper/internal/domain/rag"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/pkg/logger"
+	"luckyHelper/internal/usercontext"
 	"context"
 	"encoding/json"
 	"fmt"

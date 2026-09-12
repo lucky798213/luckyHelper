@@ -121,7 +121,7 @@ func NewTokenIssuer(secret string, ttl time.Duration, issuer string) (*TokenIssu
 		ttl = 7 * 24 * time.Hour // V1 默认 7 天，未来加 refresh 后可缩短
 	}
 	if issuer == "" {
-		issuer = "agi-assistant"
+		issuer = "luckyHelper"
 	}
 	return &TokenIssuer{secret: []byte(secret), ttl: ttl, issuer: issuer}, nil
 }

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/domain/auth"
+	"luckyHelper/internal/domain/auth"
 )
 
 // ErrUnavailable 表示底层 PG 不可用。区别于"用户不存在"，便于 service 决策降级。

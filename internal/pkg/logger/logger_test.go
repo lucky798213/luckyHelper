@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/usercontext"
 )
 
 // helper：初始化 logger 到 buf、返回 buf；每个测试独立，避免全局状态污染。

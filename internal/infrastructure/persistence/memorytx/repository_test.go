@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
+	"luckyHelper/internal/domain/memory/consistency"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
 
 	"github.com/DATA-DOG/go-sqlmock"
 )

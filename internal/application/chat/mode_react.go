@@ -14,10 +14,10 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/usercontext"
 )
 
 // reactOpts 控制 runReAct 的子 Agent 行为：

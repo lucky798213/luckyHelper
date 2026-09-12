@@ -12,7 +12,7 @@ package chat
 import (
 	"sync"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // toolRegistry 是 UnifiedAgent 的工具集合（并发安全）

@@ -14,7 +14,7 @@ import (
 	"sort"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 
 	"github.com/lib/pq"
 )

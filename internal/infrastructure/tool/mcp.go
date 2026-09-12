@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // mcpDefaultTimeout 是 MCP 工具未显式指定 ctx 截止时间时的兜底超时。

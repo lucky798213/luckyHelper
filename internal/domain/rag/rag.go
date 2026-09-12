@@ -21,11 +21,11 @@
 package rag
 
 import (
-	"agi-assistant/config"
-	"agi-assistant/internal/domain/knowledge"
-	"agi-assistant/internal/infrastructure/eventbus"
-	"agi-assistant/internal/infrastructure/persistence/ragchunk"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/domain/knowledge"
+	"luckyHelper/internal/infrastructure/eventbus"
+	"luckyHelper/internal/infrastructure/persistence/ragchunk"
+	"luckyHelper/internal/pkg/logger"
 	"fmt"
 	"runtime/debug"
 	"strings"

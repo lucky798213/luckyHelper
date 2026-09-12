@@ -1,7 +1,7 @@
 package milvusmemory
 
 import (
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 	"context"
 	"encoding/json"
 	"testing"

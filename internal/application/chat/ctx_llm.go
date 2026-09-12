@@ -14,7 +14,7 @@ package chat
 import (
 	"context"
 
-	"agi-assistant/internal/infrastructure/llm"
+	"luckyHelper/internal/infrastructure/llm"
 )
 
 // emit 安全地推送一条 SSE 事件——若 onEvent 为 nil 直接静默丢弃。

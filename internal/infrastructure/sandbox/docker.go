@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/domain/sandbox"
+	"luckyHelper/internal/domain/sandbox"
 )
 
 // DockerSandbox 通过 docker CLI 在容器内执行命令

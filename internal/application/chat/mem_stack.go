@@ -23,11 +23,11 @@ package chat
 import (
 	"sync"
 
-	"agi-assistant/config"
-	graphmem "agi-assistant/internal/domain/memory/graph"
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/memory/preference"
-	"agi-assistant/internal/domain/memory/shortterm"
+	"luckyHelper/config"
+	graphmem "luckyHelper/internal/domain/memory/graph"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/preference"
+	"luckyHelper/internal/domain/memory/shortterm"
 )
 
 // STMHydrator 接收 userID，返回该用户最近 N 条历史消息（按时间正序）。

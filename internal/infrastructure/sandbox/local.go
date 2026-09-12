@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"time"
 
-	"agi-assistant/internal/domain/sandbox"
+	"luckyHelper/internal/domain/sandbox"
 )
 
 // LocalSandbox 在本机直接执行命令（无容器隔离），仅用于 Docker 不可用时的降级场景。

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/pkg/logger"
 )
 
 func TestSearchWebLogsTavilyFailureBeforeLLMFallback(t *testing.T) {

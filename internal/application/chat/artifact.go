@@ -21,9 +21,9 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/domain/sandbox"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/sandbox"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // prepareArtifactWorkspace 在产物根目录下按 {userID}/{taskID} 创建工作目录。

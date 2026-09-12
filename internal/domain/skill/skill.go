@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // Source 标识 skill 的来源

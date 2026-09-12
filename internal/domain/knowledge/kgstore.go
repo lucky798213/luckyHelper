@@ -1,9 +1,9 @@
 package knowledge
 
 import (
-	"agi-assistant/config"
-	"agi-assistant/internal/infrastructure/platform/neo4j"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/infrastructure/platform/neo4j"
+	"luckyHelper/internal/pkg/logger"
 	"context"
 	"fmt"
 	"sort"

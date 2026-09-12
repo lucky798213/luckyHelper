@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/internal/domain/sandbox"
+	"luckyHelper/internal/domain/sandbox"
 )
 
 func TestConstraintsSource_BlockBeforeWarn(t *testing.T) {

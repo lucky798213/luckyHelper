@@ -5,10 +5,10 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/config"
-	skilldomain "agi-assistant/internal/domain/skill"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
+	"luckyHelper/config"
+	skilldomain "luckyHelper/internal/domain/skill"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
 )
 
 type memoryRepo struct {

@@ -207,7 +207,7 @@ Layer 6: main.go           — Application entry point
 ## 💾 Files in This Package
 
 ```
-/Users/yangshujie/AGI-assistant/
+/Users/yangshujie/luckyHelper/
 ├── ARCHITECTURE_DOCS_INDEX.md      ← You are here
 ├── ARCHITECTURE_README.md          ← Navigation guide (START HERE)
 ├── ARCHITECTURE_MAP.md             ← Detailed package inventory
@@ -259,10 +259,10 @@ Layer 6: main.go           — Application entry point
 
 ## 🔗 Related Resources
 
-- **Original README**: `/Users/yangshujie/AGI-assistant/README.md`
-- **Source code**: `/Users/yangshujie/AGI-assistant/internal/`
-- **Configuration**: `/Users/yangshujie/AGI-assistant/config/`
-- **Main entry**: `/Users/yangshujie/AGI-assistant/main.go`
+- **Original README**: `/Users/yangshujie/luckyHelper/README.md`
+- **Source code**: `/Users/yangshujie/luckyHelper/internal/`
+- **Configuration**: `/Users/yangshujie/luckyHelper/config/`
+- **Main entry**: `/Users/yangshujie/luckyHelper/main.go`
 
 ---
 

@@ -25,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/pkg/logger"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/pkg/logger"
+	"luckyHelper/internal/usercontext"
 )
 
 // ─────────────────────────────── RequestID ────────────────────────────────

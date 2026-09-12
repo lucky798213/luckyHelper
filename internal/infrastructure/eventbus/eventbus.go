@@ -4,7 +4,7 @@ package eventbus
 import (
 	"context"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 
 	"github.com/segmentio/kafka-go"
 )

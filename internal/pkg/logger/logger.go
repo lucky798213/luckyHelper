@@ -26,7 +26,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/usercontext"
 )
 
 // Config 是 logger 初始化配置

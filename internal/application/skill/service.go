@@ -11,13 +11,13 @@ import (
 	"fmt"
 	"strings"
 
-	skilldomain "agi-assistant/internal/domain/skill"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/infrastructure/persistence/skillrepo"
-	"agi-assistant/internal/infrastructure/skillhub"
-	toolimpl "agi-assistant/internal/infrastructure/tool"
-	"agi-assistant/internal/pkg/logger"
+	skilldomain "luckyHelper/internal/domain/skill"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/infrastructure/persistence/skillrepo"
+	"luckyHelper/internal/infrastructure/skillhub"
+	toolimpl "luckyHelper/internal/infrastructure/tool"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // ErrManifestNotFound 表示广场（内置 + GitHub 缓存）中找不到该 skillID 对应的 manifest。

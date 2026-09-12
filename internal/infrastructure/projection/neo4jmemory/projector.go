@@ -1,8 +1,8 @@
 package neo4jmemory
 
 import (
-	"agi-assistant/internal/domain/memory/consistency"
-	"agi-assistant/internal/infrastructure/projection/versioned"
+	"luckyHelper/internal/domain/memory/consistency"
+	"luckyHelper/internal/infrastructure/projection/versioned"
 )
 
 type Store = versioned.Store

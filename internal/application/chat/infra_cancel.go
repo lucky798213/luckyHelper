@@ -12,7 +12,7 @@ import (
 	"context"
 	"runtime/debug"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // registerCancel 转发到 taskRuntime

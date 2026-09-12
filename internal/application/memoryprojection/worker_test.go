@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 )
 
 type fakeOutbox struct {

@@ -7,7 +7,7 @@ package chathistory
 import (
 	"database/sql"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // Entry 是一条聊天记录的领域模型

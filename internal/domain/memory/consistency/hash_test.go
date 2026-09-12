@@ -3,7 +3,7 @@ package consistency_test
 import (
 	"testing"
 
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 )
 
 func TestComputeContentHashIsStableAcrossTagOrder(t *testing.T) {

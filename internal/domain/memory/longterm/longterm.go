@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 )
 
 // Item 是长期记忆的存储单元

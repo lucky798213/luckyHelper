@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/memory/preference"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/preference"
 )
 
 // fixedPrefProvider 适配单测：把固定 *Preference 包成"按 userID 取桶"的 provider。

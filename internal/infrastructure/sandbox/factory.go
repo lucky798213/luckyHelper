@@ -5,8 +5,8 @@
 package sandboximpl
 
 import (
-	"agi-assistant/internal/domain/sandbox"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/sandbox"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // NewSandbox 工厂函数：按 backend 字符串组装 domain.Sandbox。

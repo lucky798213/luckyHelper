@@ -6,8 +6,8 @@
 package skillhub
 
 import (
-	"agi-assistant/internal/domain/skill"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/skill"
+	"luckyHelper/internal/domain/tool"
 )
 
 // inputParam 是 Prompt 驱动 skill 的统一入参（自然语言输入）。

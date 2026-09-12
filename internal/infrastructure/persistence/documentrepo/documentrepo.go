@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/document"
+	"luckyHelper/internal/domain/document"
 )
 
 type Store struct {

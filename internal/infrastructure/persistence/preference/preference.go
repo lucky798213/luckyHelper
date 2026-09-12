@@ -4,7 +4,7 @@ package preference
 import (
 	"database/sql"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // Repo 用户偏好仓储接口

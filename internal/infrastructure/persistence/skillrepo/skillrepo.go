@@ -10,8 +10,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"agi-assistant/internal/domain/skill"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/skill"
+	"luckyHelper/internal/domain/tool"
 )
 
 // ErrUnavailable 表示底层 PG 不可用。

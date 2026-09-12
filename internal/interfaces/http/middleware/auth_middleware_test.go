@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/auth"
+	"luckyHelper/internal/domain/auth"
 )
 
 func newTestIssuer(t *testing.T) *auth.TokenIssuer {

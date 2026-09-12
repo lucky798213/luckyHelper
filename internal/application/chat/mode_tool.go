@@ -8,10 +8,10 @@ import (
 	"context"
 	"fmt"
 
-	promptctx "agi-assistant/internal/domain/promptctx"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/usercontext"
+	promptctx "luckyHelper/internal/domain/promptctx"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/usercontext"
 )
 
 // runTool 执行单工具模式。onEvent 为 nil 时即"非流式"路径。

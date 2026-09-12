@@ -5,8 +5,8 @@ import (
 	"context"
 	"time"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/pkg/logger"
 
 	kafkago "github.com/segmentio/kafka-go"
 )

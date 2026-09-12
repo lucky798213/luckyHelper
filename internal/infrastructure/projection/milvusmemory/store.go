@@ -1,7 +1,7 @@
 package milvusmemory
 
 import (
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 	"context"
 	"fmt"
 	mc "github.com/milvus-io/milvus-sdk-go/v2/client"

@@ -16,10 +16,10 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/promptctx"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/promptctx"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // ─────────────────────────────── GraphConfig ──────────────────────────────────

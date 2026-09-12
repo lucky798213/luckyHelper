@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // ToolCallTrace 是单次工具调用的简要记录（用于 Tool State 槽位）

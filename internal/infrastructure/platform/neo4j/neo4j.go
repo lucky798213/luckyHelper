@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/pkg/logger"
 
 	driver "github.com/neo4j/neo4j-go-driver/v5/neo4j"
 )

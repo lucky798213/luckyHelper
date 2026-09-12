@@ -8,9 +8,9 @@ import (
 	"errors"
 	"net/http"
 
-	skillapp "agi-assistant/internal/application/skill"
-	"agi-assistant/internal/infrastructure/persistence/skillrepo"
-	httpmw "agi-assistant/internal/interfaces/http/middleware"
+	skillapp "luckyHelper/internal/application/skill"
+	"luckyHelper/internal/infrastructure/persistence/skillrepo"
+	httpmw "luckyHelper/internal/interfaces/http/middleware"
 )
 
 // GET /api/skills/marketplace — 广场：内置精选 + GitHub 热门。

@@ -16,7 +16,7 @@ import (
 	"fmt"
 	"strings"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 
 	es "github.com/elastic/go-elasticsearch/v8"
 	milvusClient "github.com/milvus-io/milvus-sdk-go/v2/client"

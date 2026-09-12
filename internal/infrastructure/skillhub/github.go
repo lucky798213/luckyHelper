@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/skill"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/skill"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // githubSearchURL 是 GitHub 仓库搜索 API 端点（固定域名，避免 SSRF）。
@@ -82,7 +82,7 @@ func (c *Client) SearchOfficeSkills(ctx context.Context) ([]skill.Manifest, erro
 		return nil, err
 	}
 	req.Header.Set("Accept", "application/vnd.github+json")
-	req.Header.Set("User-Agent", "agi-assistant-skillhub") // GitHub API 要求带 User-Agent
+	req.Header.Set("User-Agent", "luckyHelper-skillhub") // GitHub API 要求带 User-Agent
 	req.Header.Set("X-GitHub-Api-Version", "2022-11-28")
 	if c.token != "" {
 		req.Header.Set("Authorization", "Bearer "+c.token)

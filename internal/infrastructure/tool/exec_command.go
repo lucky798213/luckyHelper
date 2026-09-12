@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"agi-assistant/internal/domain/sandbox"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/sandbox"
+	"luckyHelper/internal/domain/tool"
 )
 
 // ExecCommandTool 创建一个调用 Sandbox 执行终端命令的工具

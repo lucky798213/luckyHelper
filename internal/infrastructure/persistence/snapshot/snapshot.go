@@ -4,7 +4,7 @@ package snapshot
 import (
 	"database/sql"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // Repo 任务快照仓储接口

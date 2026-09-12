@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 )
 
 func TestApplyCommittedRejectsOlderVersion(t *testing.T) {

@@ -1,8 +1,8 @@
 package neo4jmemory
 
 import (
-	"agi-assistant/internal/domain/memory/consistency"
-	pneo "agi-assistant/internal/infrastructure/platform/neo4j"
+	"luckyHelper/internal/domain/memory/consistency"
+	pneo "luckyHelper/internal/infrastructure/platform/neo4j"
 	"context"
 )
 

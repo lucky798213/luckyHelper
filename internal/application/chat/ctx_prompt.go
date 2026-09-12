@@ -13,7 +13,7 @@ package chat
 import (
 	"context"
 
-	"agi-assistant/internal/domain/promptctx"
+	"luckyHelper/internal/domain/promptctx"
 )
 
 // promptCtx 聚合 Schema-driven prompt 装配相关组件

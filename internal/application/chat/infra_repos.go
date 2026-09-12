@@ -6,14 +6,14 @@
 package chat
 
 import (
-	"agi-assistant/internal/infrastructure/eventbus"
-	"agi-assistant/internal/infrastructure/persistence/chathistory"
-	docrepo "agi-assistant/internal/infrastructure/persistence/documentrepo"
-	ltmrepo "agi-assistant/internal/infrastructure/persistence/longterm"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
-	prefrepo "agi-assistant/internal/infrastructure/persistence/preference"
-	"agi-assistant/internal/infrastructure/persistence/ragchunk"
-	"agi-assistant/internal/infrastructure/persistence/snapshot"
+	"luckyHelper/internal/infrastructure/eventbus"
+	"luckyHelper/internal/infrastructure/persistence/chathistory"
+	docrepo "luckyHelper/internal/infrastructure/persistence/documentrepo"
+	ltmrepo "luckyHelper/internal/infrastructure/persistence/longterm"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
+	prefrepo "luckyHelper/internal/infrastructure/persistence/preference"
+	"luckyHelper/internal/infrastructure/persistence/ragchunk"
+	"luckyHelper/internal/infrastructure/persistence/snapshot"
 )
 
 // repoBundle 聚合所有数据访问层接口与基础设施状态

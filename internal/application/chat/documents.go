@@ -3,8 +3,8 @@ package chat
 import (
 	"fmt"
 
-	"agi-assistant/internal/domain/document"
-	"agi-assistant/internal/domain/rag"
+	"luckyHelper/internal/domain/document"
+	"luckyHelper/internal/domain/rag"
 )
 
 type DocumentWriteResult struct {

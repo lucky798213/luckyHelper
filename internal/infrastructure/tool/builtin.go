@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // SearchWeb 模拟互联网关键词搜索（真实实现由 agent 的 registerBuiltinTools 用

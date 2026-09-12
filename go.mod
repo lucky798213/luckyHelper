@@ -1,4 +1,4 @@
-module agi-assistant
+module luckyHelper
 
 go 1.24.1
 

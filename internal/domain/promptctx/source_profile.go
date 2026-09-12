@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/memory/preference"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/preference"
 )
 
 // PreferenceProvider 抽象"按 userID 取偏好桶"的能力——

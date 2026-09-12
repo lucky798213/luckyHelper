@@ -29,9 +29,9 @@ import (
 	"fmt"
 	"strings"
 
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // 抽取来源对应的默认 importance：用户陈述 > AI 派生

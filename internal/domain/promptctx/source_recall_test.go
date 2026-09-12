@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"agi-assistant/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/longterm"
 )
 
 type fakeRecaller struct {

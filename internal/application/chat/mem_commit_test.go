@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	"agi-assistant/internal/domain/memory/consistency"
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
+	"luckyHelper/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
 )
 
 type fakeMemoryStore struct {

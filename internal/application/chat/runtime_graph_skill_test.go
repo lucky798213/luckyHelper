@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/config"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/tool"
 )
 
 type noopSnapshotRepo struct{}

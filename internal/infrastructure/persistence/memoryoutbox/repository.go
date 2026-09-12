@@ -1,7 +1,7 @@
 package memoryoutbox
 
 import (
-	"agi-assistant/internal/domain/memory/consistency"
+	"luckyHelper/internal/domain/memory/consistency"
 	"context"
 	"database/sql"
 	"encoding/json"

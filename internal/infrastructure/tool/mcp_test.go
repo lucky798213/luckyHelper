@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // TestMCPToolStructured_Success 验证成功路径下 ToolResult 的字段完整。

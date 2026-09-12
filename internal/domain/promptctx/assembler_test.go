@@ -5,10 +5,10 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/memory/preference"
-	"agi-assistant/internal/domain/sandbox"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/memory/preference"
+	"luckyHelper/internal/domain/sandbox"
+	"luckyHelper/internal/domain/tool"
 )
 
 func buildAssembler() *ContextAssembler {

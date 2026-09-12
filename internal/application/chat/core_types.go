@@ -4,9 +4,9 @@
 package chat
 
 import (
-	"agi-assistant/internal/domain/graph"
-	"agi-assistant/internal/domain/rag"
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/graph"
+	"luckyHelper/internal/domain/rag"
+	"luckyHelper/internal/domain/tool"
 )
 
 // ─────────────────────────────── ReAct 数据结构 ──────────────────────────

@@ -8,11 +8,11 @@
 package chat
 
 import (
-	"agi-assistant/internal/domain/promptctx"
-	"agi-assistant/internal/domain/rag"
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/promptctx"
+	"luckyHelper/internal/domain/rag"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/usercontext"
 	"context"
 )
 

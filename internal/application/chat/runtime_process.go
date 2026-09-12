@@ -16,11 +16,11 @@
 package chat
 
 import (
-	"agi-assistant/internal/domain/tool"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/infrastructure/persistence/memorytx"
-	"agi-assistant/internal/pkg/logger"
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/domain/tool"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/infrastructure/persistence/memorytx"
+	"luckyHelper/internal/pkg/logger"
+	"luckyHelper/internal/usercontext"
 	"context"
 	"encoding/json"
 	"fmt"

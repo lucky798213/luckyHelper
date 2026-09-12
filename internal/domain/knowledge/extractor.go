@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // Extractor 通过注入的 LLM 回调从文本中抽取实体和关系

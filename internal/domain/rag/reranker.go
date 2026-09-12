@@ -18,7 +18,7 @@ import (
 	"sort"
 	"strings"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // Reranker 重排序器接口

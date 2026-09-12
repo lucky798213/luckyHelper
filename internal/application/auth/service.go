@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"agi-assistant/internal/domain/auth"
-	"agi-assistant/internal/infrastructure/persistence/userrepo"
+	"luckyHelper/internal/domain/auth"
+	"luckyHelper/internal/infrastructure/persistence/userrepo"
 )
 
 // dummyHashOnce 是用作"用户不存在"假比较的合法 bcrypt 摘要——

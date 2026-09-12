@@ -10,7 +10,7 @@ package chat
 import (
 	"context"
 
-	"agi-assistant/internal/usercontext"
+	"luckyHelper/internal/usercontext"
 )
 
 // InfraStatus 暴露平台层连接健康快照（供 status 端点使用）

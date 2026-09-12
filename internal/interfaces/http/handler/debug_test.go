@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"agi-assistant/config"
+	"luckyHelper/config"
 
 	"github.com/go-chi/chi/v5"
 )

@@ -18,10 +18,10 @@ import (
 	"sort"
 	"sync"
 
-	"agi-assistant/internal/domain/knowledge"
-	"agi-assistant/internal/domain/memory/longterm"
-	pneo4j "agi-assistant/internal/infrastructure/platform/neo4j"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/knowledge"
+	"luckyHelper/internal/domain/memory/longterm"
+	pneo4j "luckyHelper/internal/infrastructure/platform/neo4j"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // goSafe 启动一个带 panic recover 的后台 goroutine。

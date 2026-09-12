@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"time"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/config"
+	"luckyHelper/internal/pkg/logger"
 
 	_ "github.com/lib/pq" // 驱动注册
 )

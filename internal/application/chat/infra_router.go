@@ -7,7 +7,7 @@ package chat
 import (
 	"strings"
 
-	"agi-assistant/internal/domain/tool"
+	"luckyHelper/internal/domain/tool"
 )
 
 // needTool 判断 query 是否触发单一工具（时间 / 天气 / 搜索 / 查询）

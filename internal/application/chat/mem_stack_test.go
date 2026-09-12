@@ -5,8 +5,8 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"agi-assistant/config"
-	"agi-assistant/internal/domain/memory/shortterm"
+	"luckyHelper/config"
+	"luckyHelper/internal/domain/memory/shortterm"
 )
 
 // newTestStack 构造一个无 hydrator 的 memoryStack——

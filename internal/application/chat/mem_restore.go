@@ -12,12 +12,12 @@ package chat
 import (
 	"context"
 
-	"agi-assistant/internal/domain/knowledge"
-	graphmem "agi-assistant/internal/domain/memory/graph"
-	"agi-assistant/internal/domain/memory/longterm"
-	"agi-assistant/internal/domain/rag"
-	"agi-assistant/internal/infrastructure/llm"
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/domain/knowledge"
+	graphmem "luckyHelper/internal/domain/memory/graph"
+	"luckyHelper/internal/domain/memory/longterm"
+	"luckyHelper/internal/domain/rag"
+	"luckyHelper/internal/infrastructure/llm"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // restoreFromDB 启动时从 PostgreSQL 恢复长期记忆。

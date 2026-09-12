@@ -1,4 +1,4 @@
-# AGI-saber
+# luckyHelper
 
 agi时代的个人办公智能助手
 

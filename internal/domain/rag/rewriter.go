@@ -16,7 +16,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"agi-assistant/internal/pkg/logger"
+	"luckyHelper/internal/pkg/logger"
 )
 
 // HistoryMessage 是 Rewriter 看到的对话历史最小结构

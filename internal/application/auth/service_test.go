@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	authdomain "agi-assistant/internal/domain/auth"
+	authdomain "luckyHelper/internal/domain/auth"
 )
 
 // mockRepo 实现 userrepo.Repo 接口，所有方法纯内存。
