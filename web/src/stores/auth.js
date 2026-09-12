@@ -2,8 +2,8 @@
 import { defineStore } from 'pinia'
 import { apiFetch } from '../api/client'
 
-const TOKEN_KEY = 'agi_auth_token'
-const USER_KEY = 'agi_auth_user'
+const TOKEN_KEY = 'luckyhelper_auth_token'
+const USER_KEY = 'luckyhelper_auth_user'
 
 export const useAuth = defineStore('auth', {
   state: () => ({

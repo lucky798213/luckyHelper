@@ -10,14 +10,27 @@ export const useChat = defineStore('chat', {
     loading: false,
     abort: null,
     ragOn: false,
+    // 由 /api/status 上报，仅用于展示（不做模型切换）
+    model: '',
+    embedding: '',
+    isMock: false,
   }),
   getters: {
     modeHint(s) {
-      if (s.ragOn) return { text: '📚 知识库增强模式', cls: 'hint-pink' }
-      return { text: '💬 直接对话模式', cls: 'hint-muted' }
+      if (s.ragOn) return { text: '知识库增强', cls: 'hint-on' }
+      return { text: '直接对话', cls: 'hint-off' }
     },
   },
   actions: {
+    // 读后端真实运行时状态：模型名 / 是否降级为 mock
+    async loadStatus() {
+      try {
+        const data = await apiFetch('/api/status').then(r => r.json())
+        this.model = data.llm_model || ''
+        this.embedding = data.embedding_model || ''
+        this.isMock = !!data.is_mock
+      } catch { /* 未登录或后端未起时静默降级 */ }
+    },
     toggleRag() { this.ragOn = !this.ragOn },
     abortInflight() {
       if (this.abort) { this.abort.abort(); this.abort = null }

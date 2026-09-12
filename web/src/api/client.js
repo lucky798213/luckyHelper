@@ -6,7 +6,7 @@ const BASE = import.meta.env.VITE_API_BASE || ''
 let unauthorizedHandler = null
 export function setUnauthorizedHandler(fn) { unauthorizedHandler = fn }
 
-export function getToken() { return localStorage.getItem('agi_auth_token') || '' }
+export function getToken() { return localStorage.getItem('luckyhelper_auth_token') || '' }
 
 export async function apiFetch(path, options = {}) {
   const headers = new Headers(options.headers || {})

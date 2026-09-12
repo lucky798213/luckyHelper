@@ -1,12 +1,17 @@
 <template>
-  <div class="bg-decor"><span class="glow blue"></span><span class="glow red"></span></div>
-
-  <SideBar />
+  <SideBar :collapsed="collapsed" @toggle-collapse="collapsed = !collapsed" />
 
   <div class="main">
-    <ControlsBar @open-skills="skillHubOpen = true" />
+    <button v-if="collapsed" class="side-toggle-float" title="展开侧栏" @click="collapsed = false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M9 4v16" />
+      </svg>
+    </button>
+
     <MessageList />
-    <ChatInput />
+    <ChatInput @open-skills="skillHubOpen = true" />
   </div>
 
   <AuthModal v-if="auth.overlay" />
@@ -23,7 +28,6 @@ import { useSkills } from './stores/skills'
 import { useSessions } from './stores/sessions'
 import { useChat } from './stores/chat'
 import SideBar from './components/SideBar.vue'
-import ControlsBar from './components/ControlsBar.vue'
 import MessageList from './components/MessageList.vue'
 import ChatInput from './components/ChatInput.vue'
 import AuthModal from './components/AuthModal.vue'
@@ -36,6 +40,9 @@ const skills = useSkills()
 const sessions = useSessions()
 const chat = useChat()
 const skillHubOpen = ref(false)
+const collapsed = ref(localStorage.getItem('luckyhelper_sidebar_collapsed') === '1')
+
+watch(collapsed, (v) => localStorage.setItem('luckyhelper_sidebar_collapsed', v ? '1' : '0'))
 
 // 401 → 清 token + 弹登录层 + 中断在飞的对话
 setUnauthorizedHandler(() => {
@@ -46,6 +53,7 @@ setUnauthorizedHandler(() => {
 function initApp() {
   docs.loadLibrary()
   skills.loadInstalled()
+  chat.loadStatus()
 }
 
 watch(() => auth.loggedIn, (v) => {
