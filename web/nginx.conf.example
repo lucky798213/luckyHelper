@@ -9,7 +9,7 @@ server {
     listen       8080;            # 前端独立端口
     server_name  localhost;
 
-    root   /path/to/AGI-AI-assitant/web/dist;
+    root   /path/to/luckyHelper/web/dist;
     index  index.html;
 
     # SPA 路由回退：非静态资源一律回 index.html

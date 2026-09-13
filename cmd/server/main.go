@@ -1,22 +1,19 @@
-// Final Stage — 全阶段整合 AI 助手
+// luckyHelper — AGI 时代的个人办公智能助手（后端入口）
 //
 // 目录结构：
 //
-//	config/                配置（YAML 加载 + 默认值，分组子结构）
+//	config/                        配置（YAML 加载 + 默认值；.env 注入密钥）
 //	internal/
-//	  promptctx/           Schema-driven prompt context 装配
-//	  llm/                 LLM 客户端（真实 API + Mock 降级）
-//	  rag/                 RAG 引擎（文本切分 + 三路混合检索）
-//	  tools/               工具定义与调用（time / weather / search / exec_command / MCP）
-//	  memory/              三层记忆（短期 / 长期 / 用户偏好 / 图记忆）
-//	  graph/                知识图谱业务（实体抽取 + 文档图）
-//	  sandbox/             命令沙箱执行
-//	  agent/               UnifiedAgent（ReAct + Harness + 智能路由）
-//	  handler/             HTTP API（chi.Router + 中间件）
-//	  middleware/          requestID / panicRecover / accessLog / cors
-//	  platform/            平台层连接封装（milvus / postgres / es / kafka / neo4j）
-//	  repo/                数据访问仓储
-//	frontend/              单文件前端 HTML
+//	  application/                 应用服务：auth 注册登录 / chat 统一 Agent / skill 广场
+//	    chat/                      UnifiedAgent（ReAct + 规划图 + 子 Agent + 工具编排）
+//	    memoryprojection/          长期记忆 Outbox 投影 worker（Milvus / Neo4j）
+//	    memoryreconcile/           周期对账，修复派生存储漂移
+//	  domain/                      领域层：tool / skill / rag / memory / document / sandbox / knowledge / promptctx
+//	  infrastructure/              LLM、持久化仓储、平台连接（postgres / milvus / es / kafka / neo4j）、工具与沙箱
+//	  interfaces/http/             chi handler + middleware（JWT / requestID / panicRecover / accessLog / CORS）
+//	  pkg/logger/                  slog 封装
+//	  usercontext/                 userID context helpers
+//	web/                           Vue 3 + Vite 前端（独立启动，后端不托管静态文件）
 //
 // 启动 → 退出全流程：
 //
@@ -298,7 +295,7 @@ func newHTTPServer(cfg *config.APIConfig, a *chat.UnifiedAgent, authSvc *authapp
 func printBanner(cfg *config.APIConfig, status map[string]string) {
 	addr := ":" + cfg.ServerPort
 	fmt.Println("========================================")
-	fmt.Println("Final Stage · AGI 智能助手启动成功")
+	fmt.Println("luckyHelper · AGI 智能助手启动成功")
 	fmt.Println("========================================")
 
 	fmt.Printf("[INFO] Service       http://localhost%s\n", addr)

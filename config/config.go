@@ -620,9 +620,9 @@ func applyDefaults(c *APIConfig) {
 	if c.SandboxMaxPIDs <= 0 {
 		c.SandboxMaxPIDs = 64
 	}
-	// 产物目录默认 ~/Desktop/agi-artifacts；展开 ~ 为用户家目录
+	// 产物目录默认 ~/Desktop/luckyHelper-artifacts；展开 ~ 为用户家目录
 	if c.SandboxArtifactHostDir == "" {
-		c.SandboxArtifactHostDir = "~/Desktop/agi-artifacts"
+		c.SandboxArtifactHostDir = "~/Desktop/luckyHelper-artifacts"
 	}
 	c.SandboxArtifactHostDir = expandHome(c.SandboxArtifactHostDir)
 

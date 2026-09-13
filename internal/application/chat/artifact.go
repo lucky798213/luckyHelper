@@ -95,7 +95,7 @@ func (a *UnifiedAgent) produceArtifact(
 // materialize 把正文写到工作目录的目标文件。返回 (是否成功, 实际执行后端)。
 // 优先在沙箱容器内 cp（在 /workspace 内完成 → 挂载到宿主机桌面）；否则 Go 落盘兜底。
 func (a *UnifiedAgent) materialize(ctx context.Context, hostWS, filename, content string) (bool, string) {
-	stage := ".agi_stage_" + fmt.Sprint(time.Now().UnixNano())
+	stage := ".luckyhelper_stage_" + fmt.Sprint(time.Now().UnixNano())
 	stagePath := filepath.Join(hostWS, stage)
 	finalPath := filepath.Join(hostWS, filename)
 

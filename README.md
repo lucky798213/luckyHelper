@@ -284,7 +284,7 @@ SSE 事件类型主要包括：
 │   ├── pkg/logger/             # slog 封装
 │   └── usercontext/            # userID context helpers
 ├── web/                        # Vue 3 前端
-├── docs/                       # 架构文档和示例 skill 文档
+├── docs/                       # 架构文档、一致性方案与面试训练计划
 ├── docker-compose.yml          # 本地基础设施
 ├── Dockerfile                  # 后端镜像
 └── go.mod
